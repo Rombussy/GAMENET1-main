@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 982882481394147707}
   - component: {fileID: -990373587294159219}
   - component: {fileID: 5345672903188083173}
+  - component: {fileID: 7868841416296764130}
+  - component: {fileID: -3624055625181700291}
   m_Layer: 0
   m_Name: Netplayer
   m_TagString: Untagged
@@ -230,3 +232,35 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -9.8
   groundedGravity: -2
+--- !u!114 &7868841416296764130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245307490783363834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d01d70497513f4e85bd79fa3ce995e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerColorManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  playerRenderer: {fileID: 8166710143570817635}
+  playerMaterials:
+  - {fileID: 2100000, guid: 60b4cd69c630b424f9aa9467d389dd9e, type: 2}
+  - {fileID: 2100000, guid: 9888c1b5b57a8604185babb3464d837e, type: 2}
+  - {fileID: 2100000, guid: 251be79496f7236408ed5bee52b5cc7a, type: 2}
+  - {fileID: 2100000, guid: 8bd46c7bbbf299c40ad0a4960c2af6f3, type: 2}
+--- !u!114 &-3624055625181700291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245307490783363834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a87683a8c2c7134088feccf2bb4d97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalPlayerCamera
+  ShowTopMostFoldoutHeaderGroup: 1
