@@ -10,23 +10,21 @@ using UnityEngine;
 
 public class MultiplayerMenuMain : NetworkBehaviour
 {
+    //UPDATED UI
     [Header("UI References")]
     [SerializeField] private GameObject menuUI;
     [SerializeField] private TMP_InputField joinCodeInput;
     [SerializeField] private TMP_Text joinCodeText;
-    [SerializeField] private GameObject displayJoinCode;
     [SerializeField] private TMP_Text statusText;
 
-
     [Header("Relay Settings")]
-    [SerializeField] private int maxConnections = 8; // This includes host
-
+    [SerializeField] private int maxConnections = 8;
+    //sets the max player capacity (including host)
     private const string WebGLConnectionType = "wss";
-
+    //it tells unity to use secure Websockets
     private async void Start()
     {
         await InitializeUnityServices();
-        displayJoinCode.SetActive(false);
     }
 
     private async System.Threading.Tasks.Task InitializeUnityServices()
@@ -82,9 +80,6 @@ public class MultiplayerMenuMain : NetworkBehaviour
                 }
 
                 SetStatus("Host started. Join Code: " + joinCode);
-                displayJoinCode.SetActive(true);
-                var displayJoinCodeTxt = displayJoinCode.GetComponent<TextMeshProUGUI>();
-                displayJoinCodeTxt.text = $"Server Code: {joinCode}";
                 HideMenu();
             }
             else
